@@ -1,3 +1,8 @@
+:root {
+  --hf-bg-color: #1d1e20;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,27 +10,39 @@
   font-family: 'Rotobo', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 main {
-  padding: 5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-  padding: 2rem;
-  background-color: black;
+  padding: 2rem 3rem;
+  background-color: var(--hf-bg-color);
   display: flex;
-  justify-content: space-between;
-  width: 100vw;
-  position: fixed;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 header img {
+  justify-self: end;
   cursor: pointer;
   width: 10.5rem;
   height: 1.75rem;
 }
 
+nav {
+  align-self: center;
+}
+
 nav ul {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 1rem;
 }
@@ -33,26 +50,52 @@ nav ul {
 nav ul li a {
   color: white;
   text-decoration: none;
+  padding: 0.5rem 0;
 
   &:hover {
-    border-bottom: 2px solid rgb(231, 115, 115);
+    border-bottom: 2px solid #f5a2b6;
   }
 }
 
 #card_container {
+  width: 80vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
-  padding: 2rem;
 }
 
 .card {
-  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
+}
+
+.card p {
+  font-size: x-large;
+  justify-self: flex-end;
+}
+
+footer {
+  background-color: var(--hf-bg-color);
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#github_icon {
+  cursor: pointer;
+  justify-self: start;
 }
