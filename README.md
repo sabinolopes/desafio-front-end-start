@@ -91,8 +91,8 @@ npm install
 2. Construa e execute o contêiner Docker:
 
 ```bash
-docker build -t minha-aplicacao .
-docker run -p 8080:80 minha-aplicacao
+docker build -t desafio-start . 
+docker run -p 3000:3000 desafio-start
 ```
 
 **Usando Vite:**
@@ -205,8 +205,8 @@ npm install
 2. Build and run the Docker container:
 
 ```bash
-docker build -t my-app .
-docker run -p 8080:80 my-app
+docker build -t desafio-start . 
+docker run -p 3000:3000 desafio-start
 ```
 
 **Using Vite:**
