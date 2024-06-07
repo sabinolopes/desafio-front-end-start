@@ -9,9 +9,17 @@ footerYear.textContent = new Date().getFullYear();
 
 // Fetch products from the API
 const fetchProducts = async (url) => {
-  const response = await fetch(url);
-  const { products } = await response.json();
-  return products;
+  try {
+    const response = await fetch(url);
+
+    const data = await response.json();
+
+    return data;
+  } catch (error) {
+    console.error('Error fetching products:', error);
+
+    return [];
+  }
 };
 
 const filterProducts = (products) => {
