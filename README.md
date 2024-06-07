@@ -11,6 +11,8 @@
 
 Este projeto é uma aplicação web que exibe uma seleção de produtos de perfumes e maquiagens. Abaixo estão as instruções para executar o projeto localmente.
 
+Veja a implementação em Programação Orientada a Objetos em: `app/src/productManager.js`.
+
 ### Pré-requisitos
 
 Antes de começar, você precisará ter instalado em sua máquina as seguintes ferramentas: Git, Docker (opcional) e Node.js.
@@ -66,8 +68,13 @@ desafio-front-end-start/
 │   ├── styles/            # Arquivos CSS
 │   │   ├── styles.css     # Estilos principais da aplicação
 │   ├── index.html         # Estrutura HTML principal
-│   ├── Dockerfile         # Arquivo de configuração do Docker
 │   ├── package.json       # Arquivo de configuração do npm
+│   ├── Dockerfile         # Arquivo de configuração do Docker
+├── tests/                 # Diretório de testes
+│   ├── unit/              # Testes unitários Jest
+│   │   ├── index.test.js  # Arquivo de teste Jest para index.js
+│   ├── e2e/               # Testes de ponta a ponta Cypress
+│   │   ├── app_spec.js    # Arquivo de teste Cypress para a aplicação
 ├── README.md              # Instruções e documentação do projeto
 ```
 
@@ -78,6 +85,8 @@ desafio-front-end-start/
 ## About the Project
 
 This project is a web application that showcases a selection of perfume and makeup products. Below are the instructions for running the project locally.
+
+See the Object-Oriented Programming implementation at: `app/src/productManager.js`.
 
 ## Prerequisites
 
@@ -125,7 +134,7 @@ Before you start, you will need to have the following tools installed on your ma
 Here is an overview of the project structure:
 
 ```
-desafio-front-end-start/
+front-end-challenge-start/
 ├── app/
 │   ├── assets/            # Contains images and icons
 │   ├── src/               # Project source code
@@ -133,7 +142,12 @@ desafio-front-end-start/
 │   ├── styles/            # CSS files
 │   │   ├── styles.css     # Main application styles
 │   ├── index.html         # Main HTML structure
-│   ├── Dockerfile         # Docker configuration file
 │   ├── package.json       # npm configuration file
+│   ├── Dockerfile         # Docker configuration file
+├── tests/                 # Test directory
+│   ├── unit/              # Jest unit tests
+│   │   ├── index.test.js  # Jest test file for index.js
+│   ├── e2e/               # Cypress end-to-end tests
+│   │   ├── app_spec.js    # Cypress test file for the application
 ├── README.md              # Project instructions and documentation
 ```

@@ -2,7 +2,6 @@
   --hf-bg-color: #1d1e20;
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -61,7 +60,7 @@ nav ul li a {
   width: 80vw;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .card {
@@ -73,6 +72,7 @@ nav ul li a {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   padding: 2rem;
   cursor: pointer;
+  color: var(--hf-bg-color);
 
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -97,5 +97,37 @@ footer {
 
 #github_icon {
   cursor: pointer;
-  justify-self: start;
+}
+
+.text_section {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 2rem 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  #card_container {
+    width: 90vw;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  footer {
+    padding: 1rem;
+  }
+  
 }

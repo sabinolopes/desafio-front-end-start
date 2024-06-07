@@ -1,3 +1,4 @@
+// Veja a implementação em POO em: app/src/prodcutMAnager.js
 const cardContainer = document.getElementById('card_container');
 const footerYear = document.getElementById('footer_year');
 const API_URL = 'https://dummyjson.com/products';
@@ -12,9 +13,9 @@ const fetchProducts = async (url) => {
   try {
     const response = await fetch(url);
 
-    const data = await response.json();
+    const { products } = await response.json();
 
-    return data;
+    return products;
   } catch (error) {
     console.error('Error fetching products:', error);
 
