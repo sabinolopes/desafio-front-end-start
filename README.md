@@ -70,13 +70,53 @@ desafio-front-end-start/
 │   ├── index.html         # Estrutura HTML principal
 │   ├── package.json       # Arquivo de configuração do npm
 │   ├── Dockerfile         # Arquivo de configuração do Docker
-├── tests/                 # Diretório de testes
-│   ├── unit/              # Testes unitários Jest
-│   │   ├── index.test.js  # Arquivo de teste Jest para index.js
-│   ├── e2e/               # Testes de ponta a ponta Cypress
-│   │   ├── app_spec.js    # Arquivo de teste Cypress para a aplicação
+│   ├── cypress/           # Diretório de testes Cypress
+│   │   ├── e2e/           # Testes de integração Cypress
+│   │   │   ├── spec.cy.js # Arquivo de teste Cypress para a aplicação
 ├── README.md              # Instruções e documentação do projeto
 ```
+
+### Executando Testes
+
+Antes de executar os testes, certifique-se de que a aplicação está rodando. Você pode rodar a aplicação usando Docker ou Vite.
+
+**Usando Docker:**
+
+1. Instale as dependências, incluindo Cypress:
+
+```bash
+npm install
+```
+
+2. Construa e execute o contêiner Docker:
+
+```bash
+docker build -t minha-aplicacao .
+docker run -p 8080:80 minha-aplicacao
+```
+
+**Usando Vite:**
+
+```bash
+npm install
+npm run dev
+```
+
+Uma vez que a aplicação está rodando, você pode abrir o Cypress Test Runner com o seguinte comando:
+
+```bash
+npm run cypress:open
+```
+
+Isso abrirá a interface do Cypress, onde você pode executar seus testes de ponta a ponta.
+
+Se preferir rodar o Cypress pelo terminal, use o seguinte comando:
+
+```bash
+npm run test
+```
+
+Lembre-se, a aplicação deve estar rodando para que os testes do Cypress funcionem corretamente.
 
 ## English
 
@@ -144,10 +184,50 @@ front-end-challenge-start/
 │   ├── index.html         # Main HTML structure
 │   ├── package.json       # npm configuration file
 │   ├── Dockerfile         # Docker configuration file
-├── tests/                 # Test directory
-│   ├── unit/              # Jest unit tests
-│   │   ├── index.test.js  # Jest test file for index.js
-│   ├── e2e/               # Cypress end-to-end tests
-│   │   ├── app_spec.js    # Cypress test file for the application
+│   ├── cypress/           # Cypress test directory
+│   │   ├── e2e/           # Cypress end-to-end tests
+│   │   │   ├── spec.cy.js # Cypress test file for the application
 ├── README.md              # Project instructions and documentation
 ```
+
+### Running Tests
+
+Before running the tests, make sure the application is running. You can run the application using Docker or Vite.
+
+**Using Docker:**
+
+1. Install the dependencies, including Cypress:
+
+```bash
+npm install
+```
+
+2. Build and run the Docker container:
+
+```bash
+docker build -t my-app .
+docker run -p 8080:80 my-app
+```
+
+**Using Vite:**
+
+```bash
+npm install
+npm run dev
+```
+
+Once the application is running, you can open the Cypress Test Runner with the following command:
+
+```bash
+npm run cypress:open
+```
+
+This will open the Cypress interface, where you can run your end-to-end tests.
+
+If you prefer to run Cypress from the terminal, use the following command:
+
+```bash
+npm run test
+```
+
+Remember, the application must be running for Cypress tests to work correctly.

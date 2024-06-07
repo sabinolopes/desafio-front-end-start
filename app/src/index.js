@@ -1,12 +1,16 @@
 // Veja a implementação em POO em: app/src/prodcutMAnager.js
 const cardContainer = document.getElementById('card_container');
-const footerYear = document.getElementById('footer_year');
 const API_URL = 'https://dummyjson.com/products';
 const MAX_PRODUCTS = 10;
 const PRODUCT09_ID = 9;
 
 // Set the current year in the footer
-footerYear.textContent = new Date().getFullYear();
+const setFooterYear = () => {
+  const footerYear = document.getElementById('footer_year');
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
+};
 
 // Fetch products from the API
 const fetchProducts = async (url) => {
@@ -63,4 +67,7 @@ const displayProducts = async () => {
 };
 
 // Load products when the page is loaded
-window.onload = displayProducts;
+window.onload = () => {
+  setFooterYear();
+  displayProducts();
+};
