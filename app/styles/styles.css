@@ -1,16 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 :root {
   --hf-bg-color: #1d1e20;
+  --border-color: #f5a2b6;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Rotobo', sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -29,19 +32,15 @@ header {
 }
 
 header img {
-  justify-self: end;
-  cursor: pointer;
   width: 10.5rem;
-  height: 1.75rem;
 }
 
-nav {
+header nav {
   align-self: center;
 }
 
 nav ul {
   display: flex;
-  align-items: center;
   list-style: none;
   gap: 1rem;
 }
@@ -52,7 +51,7 @@ nav ul li a {
   padding: 0.5rem 0;
 
   &:hover {
-    border-bottom: 2px solid #f5a2b6;
+    border-bottom: 2px solid var(--border-color);
   }
 }
 
@@ -67,6 +66,8 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   gap: 1rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -81,7 +82,6 @@ nav ul li a {
 
 .card p {
   font-size: x-large;
-  justify-self: flex-end;
 }
 
 footer {
@@ -90,7 +90,6 @@ footer {
   padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 1rem;
 }
