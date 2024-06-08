@@ -108,6 +108,11 @@ footer {
   gap: 1rem;
 }
 
+#error_message {
+  font-size: xx-large;
+  font-weight: 600;
+}
+
 @media screen and (max-width: 768px) {
   header {
     padding: 2rem 1rem;

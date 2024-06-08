@@ -60,7 +60,14 @@ const createCard = (product) => {
 // Display the products on the page
 const displayProducts = async () => {
   const products = await fetchProducts(API_URL);
+
+  if (!products.length) {
+    cardContainer.id = '';
+    cardContainer.innerHTML = '<p id="error_message">Error loading products</p>';
+  }
+
   const filteredProducts = filterProducts(products);
+
   filteredProducts.forEach((product) => {
     createCard(product);
   });
