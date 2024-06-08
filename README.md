@@ -11,6 +11,8 @@
 
 Este projeto é uma aplicação web que exibe uma seleção de produtos de perfumes e maquiagens. Abaixo estão as instruções para executar o projeto localmente.
 
+A aplicação está disponível online em: [https://start-store-taupe.vercel.app/](https://start-store-taupe.vercel.app/)
+
 Veja a implementação em Programação Orientada a Objetos em: `app/src/productManager.js`.
 
 ### Pré-requisitos
@@ -125,6 +127,8 @@ Lembre-se, a aplicação deve estar rodando para que os testes do Cypress funcio
 ## About the Project
 
 This project is a web application that showcases a selection of perfume and makeup products. Below are the instructions for running the project locally.
+
+The application is available online at: [https://start-store-taupe.vercel.app/](https://start-store-taupe.vercel.app/)
 
 See the Object-Oriented Programming implementation at: `app/src/productManager.js`.
 
